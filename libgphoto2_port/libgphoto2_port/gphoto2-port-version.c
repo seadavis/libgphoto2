@@ -18,7 +18,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#include "config.h"
+
 #include <stdlib.h>
 
 #include <gphoto2/gphoto2-port-version.h>
@@ -29,8 +29,6 @@ const char **gp_port_library_version(GPVersionVerbosity verbose)
 	   ones, but the current method is easier for now :-) */
 	static const char *shrt[] =
 		{
-			PACKAGE_VERSION,
-			"iolibs: " IOLIB_LIST,
 #ifdef HAVE_CC
 			HAVE_CC,
 #else
@@ -71,8 +69,6 @@ const char **gp_port_library_version(GPVersionVerbosity verbose)
 		};
 	static const char *verb[] =
 		{
-			PACKAGE_VERSION,
-			"iolibs: " IOLIB_LIST,
 #ifdef HAVE_CC
 			HAVE_CC " (C compiler used)",
 #else

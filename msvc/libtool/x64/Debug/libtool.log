@@ -1,0 +1,3 @@
+﻿  ltdl.c
+C:\Software Projects\Copied Repos\libgphoto2\msvc\libtool\ltdl.c(21): warning C4716: 'lt_dlsym': must return a value
+  libtool.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\libtool.dll

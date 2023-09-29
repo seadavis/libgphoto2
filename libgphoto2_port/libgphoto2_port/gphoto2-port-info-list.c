@@ -23,8 +23,7 @@
 #define _GNU_SOURCE
 #define _DARWIN_C_SOURCE
 
-#include "config.h"
-
+#include "../../msvc/GPhotoPort/pch.h"
 #include <gphoto2/gphoto2-port-info-list.h>
 
 #include <errno.h>
@@ -99,8 +98,8 @@ gp_port_init_localedir (const char *localedir)
 		       localedir?localedir:"NULL");
 		return GP_OK;
 	}
-	const char *const actual_localedir = (localedir?localedir:LOCALEDIR);
-	const char *const gettext_domain = GETTEXT_PACKAGE_LIBGPHOTO2_PORT;
+	const char *const actual_localedir = "";
+	const char *const gettext_domain = "";
 	if (bindtextdomain (gettext_domain, actual_localedir) == NULL) {
 		if (errno == ENOMEM)
 			return GP_ERROR_NO_MEMORY;
@@ -286,7 +285,7 @@ foreach_func (const char *filename, lt_ptr data)
 			GP_LOG_D ("Loaded '%s' ('%s') from '%s'.",
 				list->info[j]->name, list->info[j]->path,
 				filename);
-			list->info[j]->library_filename = strdup (filename);
+			list->info[j]->library_filename = _strdup (filename);
 		}
 	}
 
@@ -316,12 +315,12 @@ gp_port_info_list_load (GPPortInfoList *list)
 	C_PARAMS (list);
 
 	GP_LOG_D ("Using ltdl to load io-drivers from '%s'...", iolibs);
-	gpi_libltdl_lock();
+
 	lt_dlinit ();
 	lt_dladdsearchdir (iolibs);
 	result = lt_dlforeachfile (iolibs, foreach_func, list);
 	lt_dlexit ();
-	gpi_libltdl_unlock();
+
 	if (result < 0)
 		return (result);
 	if (list->iolib_count == 0) {
@@ -544,7 +543,7 @@ gp_port_info_get_name (GPPortInfo info, char **name) {
  **/
 int
 gp_port_info_set_name (GPPortInfo info, const char *name) {
-	C_MEM (info->name = strdup (name));
+	C_MEM (info->name = _strdup (name));
 	return GP_OK;
 }
 
@@ -575,7 +574,7 @@ gp_port_info_get_path (GPPortInfo info, char **path) {
  **/
 int
 gp_port_info_set_path (GPPortInfo info, const char *path) {
-	C_MEM (info->path = strdup (path));
+	C_MEM (info->path = _strdup (path));
 	return GP_OK;
 }
 

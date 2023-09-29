@@ -7,8 +7,6 @@
 #ifndef LIBGPHOTO2_PORT_I18N_H
 #define LIBGPHOTO2_PORT_I18N_H
 
-#include "config.h"
-
 #ifdef ENABLE_NLS
 #  include <libintl.h>
 #  undef _

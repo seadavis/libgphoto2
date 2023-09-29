@@ -22,18 +22,18 @@
 
 #define _DEFAULT_SOURCE
 
-#include "config.h"
+//#include "config.h"
 #include <gphoto2/gphoto2-port-library.h>
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <sys/time.h>
-#include <sys/param.h>
-#include <dirent.h>
+//#include <sys/time.h>
+//#include <sys/param.h>
+//#include <dirent.h>
 #include <string.h>
-
+#include <Windows.h>
 #include <usb.h>
 
 #ifndef ENODATA

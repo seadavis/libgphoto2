@@ -21,9 +21,6 @@
 #ifndef LIBGPHOTO2_GPHOTO2_PORT_PORTABILITY_H
 #define LIBGPHOTO2_GPHOTO2_PORT_PORTABILITY_H
 
-#ifdef _GPHOTO2_INTERNAL_CODE
-
-#if defined(WIN32) && !defined(__WINESRC__)
 
 /************************************************************************
  * Begin Windows definitions (but not during WINE compilation)
@@ -37,7 +34,6 @@
 # include <string.h>
 # include <stdio.h>
 # include <direct.h>
-# include <unistd.h>
 
 # ifndef IOLIBS
 #  define IOLIBS			"."
@@ -142,9 +138,6 @@ int		 gp_system_is_dir	(const char *dirname);
 
 /************************************************************************
  * End platform independent portability functions
- ************************************************************************/
-#endif /* _GPHOTO2_INTERNAL_CODE */
-
-#endif /* !defined(LIBGPHOTO2_GPHOTO2_PORT_PORTABILITY_H) */
+*/
 
 /* end of file */
