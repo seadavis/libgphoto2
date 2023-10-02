@@ -48,6 +48,9 @@
     <ClInclude Include="..\..\camlibs\ptp2\ptp-private.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="gphoto-endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -75,6 +78,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\camlibs\ptp2\usb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\camlibs\ptp2\ptp-pack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\camlibs\ptp2\fujiptpip.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

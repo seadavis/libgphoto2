@@ -43,7 +43,7 @@
 # include <unistd.h>
 #endif
 
-
+#include "gphoto-endian.h"
 #include "libgphoto2_port/compiletime-assert.h"
 
 #ifdef ENABLE_NLS

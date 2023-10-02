@@ -32,6 +32,7 @@
 # define PTPSOCK_READ(fd, buf, size) recv((fd), ((char*)(buf)), (size), 0)
 # define PTPSOCK_WRITE(fd, buf, size) send((fd), ((char*)(buf)), (size), 0)
 # define PTPSOCK_PROTO IPPROTO_TCP
+# define ssize_t size_t
 #else
 # include <sys/socket.h>
 # define PTPSOCK_SOCKTYPE int

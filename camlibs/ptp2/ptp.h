@@ -49,6 +49,35 @@ extern "C" {
 #define USB_CLASS_PTP			6
 #endif
 
+#ifndef htobe16
+# ifdef __HAVE_NTOHL
+#  define htobe16(x) htons(x)
+# else
+#  ifdef WORDS_BIGENDIAN
+#   define htobe16(x) (x)
+#  else
+#   define htobe16(x) swap16(x)
+#  endif
+# endif
+#endif
+#ifndef htobe32
+# ifdef __HAVE_NTOHL
+#  define htobe32(x) htonl(x)
+# else
+#  ifdef WORDS_BIGENDIAN
+#   define htobe32(x) (x)
+#  else
+#   define htobe32(x) swap32(x)
+#  endif
+# endif
+#endif
+#ifndef be16toh
+# define be16toh(x) htobe16(x)
+#endif
+#ifndef be32toh
+# define be32toh(x) htobe32(x)
+#endif
+
 /* PTP request/response/event general PTP container (transport independent) */
 
 struct _PTPContainer {

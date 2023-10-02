@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port;C:\Software Projects\Copied Repos\libgphoto2;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhotoCamLib;C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port;C:\Software Projects\Copied Repos\libgphoto2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -153,14 +153,17 @@
     <ClInclude Include="..\GPhoto\framework.h" />
     <ClInclude Include="..\GPhoto\pch.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="gphoto-endian.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\camlibs\ptp2\chdk.c" />
     <ClCompile Include="..\..\camlibs\ptp2\config.c" />
+    <ClCompile Include="..\..\camlibs\ptp2\fujiptpip.c" />
     <ClCompile Include="..\..\camlibs\ptp2\library.c" />
     <ClCompile Include="..\..\camlibs\ptp2\n-param-test.c" />
     <ClCompile Include="..\..\camlibs\ptp2\olympus-wrap.c" />
+    <ClCompile Include="..\..\camlibs\ptp2\ptp-pack.c" />
     <ClCompile Include="..\..\camlibs\ptp2\ptp.c" />
     <ClCompile Include="..\..\camlibs\ptp2\usb.c" />
     <ClCompile Include="dllmain.cpp" />

@@ -39,7 +39,7 @@
 #include <gphoto2/gphoto2-setting.h>
 
 #include "libgphoto2/i18n.h"
-
+#include "gphoto-endian.h"
 #include "ptp.h"
 #include "ptp-bugs.h"
 #include "ptp-private.h"

@@ -43,7 +43,7 @@
  */
 #define _DEFAULT_SOURCE
 #define _DARWIN_C_SOURCE
-
+#define WIN32
 
 #include <stdlib.h>
 #include <string.h>
@@ -78,8 +78,9 @@
 
 #include "ptp.h"
 #include "ptp-bugs.h"
-
+#include "gphoto-endian.h"
 #include "ptp-pack.c"
+
 
 #define fujiptpip_len		0
 #define fujiptpip_type		4	/* not always present */
@@ -140,7 +141,7 @@ ptp_fujiptpip_sendreq (PTPParams* params, PTPContainer* req, int dataphase)
 	default:
 		break;
 	}
-	GP_LOG_DATA ( (char*)request, len, "ptpip/oprequest data:");
+	//GP_LOG_DATA ( (char*)request, len, "ptpip/oprequest data:");
 	ret = ptpip_write_with_timeout (params->cmdfd, request, len, PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	free (request);
 	if (ret == PTPSOCK_ERR) {
@@ -175,7 +176,7 @@ ptp_fujiptpip_generic_read (PTPParams *params, int fd, PTPIPHeader *hdr, unsigne
 				return PTP_ERROR_TIMEOUT;
 			return PTP_ERROR_IO;
 		}
-		GP_LOG_DATA ((char*)xhdr+curread, ret, "ptpip/generic_read header:");
+		//GP_LOG_DATA ((char*)xhdr+curread, ret, "ptpip/generic_read header:");
 		curread += ret;
 		if (ret == 0) {
 			GP_LOG_E ("End of stream after reading %d bytes of ptpipheader", curread);
@@ -202,7 +203,7 @@ ptp_fujiptpip_generic_read (PTPParams *params, int fd, PTPIPHeader *hdr, unsigne
 				return PTP_ERROR_TIMEOUT;
 			return PTP_ERROR_IO;
 		} else {
-			GP_LOG_DATA ((char*)((*data)+curread), ret, "ptpip/generic_read data:");
+			//GP_LOG_DATA ((char*)((*data)+curread), ret, "ptpip/generic_read data:");
 		}
 		if (ret == 0)
 			break;
@@ -267,7 +268,7 @@ ptp_fujiptpip_senddata (PTPParams* params, PTPContainer* ptp,
 	htod16a(&request[fujiptpip_data_datatype],2);
 	htod16a(&request[fujiptpip_data_code],ptp->Code);
 	htod32a(&request[fujiptpip_data_transid],ptp->Transaction_ID);
-	GP_LOG_DATA ((char*)request, sizeof(request), "ptpip/senddata header:");
+	//GP_LOG_DATA ((char*)request, sizeof(request), "ptpip/senddata header:");
 	ret = ptpip_write_with_timeout (params->cmdfd, request, sizeof(request), PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	if (ret == PTPSOCK_ERR) {
 		ptpip_perror ("sendreq/write to cmdfd");
@@ -298,7 +299,7 @@ ptp_fujiptpip_senddata (PTPParams* params, PTPContainer* ptp,
 			return PTP_RC_GeneralError;
 		}
 		towrite2 = xtowrite;
-		GP_LOG_DATA ((char*)xdata, towrite2, "ptpip/senddata data:");
+		//GP_LOG_DATA ((char*)xdata, towrite2, "ptpip/senddata data:");
 		written = 0;
 		while (written < towrite2) {
 			ret = write (params->cmdfd, xdata+written, towrite2-written);
@@ -507,7 +508,7 @@ ptp_fujiptpip_getdata (PTPParams* params, PTPContainer* ptp, PTPDataHandler *han
 		GP_LOG_D("synthesizing Fuji DeviceInfo");
 		xret = handler->putfunc (params, handler->priv, sizeof(hardcoded_deviceinfo),hardcoded_deviceinfo);
 	} else {
-		GP_LOG_DATA ((char*)(xdata+fujiptpip_getdata_payload), dtoh32(hdr.length)-fujiptpip_getdata_payload-4, "fujiptpip/getdatda data:");
+		//GP_LOG_DATA ((char*)(xdata+fujiptpip_getdata_payload), dtoh32(hdr.length)-fujiptpip_getdata_payload-4, "fujiptpip/getdatda data:");
 		xret = handler->putfunc (params, handler->priv,
 			dtoh32(hdr.length)-fujiptpip_getdata_payload-4, xdata+fujiptpip_getdata_payload
 		);
@@ -616,7 +617,7 @@ ptp_fujiptpip_init_command_request (PTPParams* params)
 	*/
 
 
-	GP_LOG_DATA ((char*)cmdrequest, len, "ptpip/init_cmd data:");
+	//GP_LOG_DATA ((char*)cmdrequest, len, "ptpip/init_cmd data:");
 	ret = ptpip_write_with_timeout (params->cmdfd, cmdrequest, len, PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	free (cmdrequest);
 	if (ret == PTPSOCK_ERR) {
