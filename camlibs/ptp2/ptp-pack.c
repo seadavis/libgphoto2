@@ -36,6 +36,7 @@
 
 #include "ptp.h"
 #include "gphoto-endian.h"
+#pragma once
 
 static inline uint16_t
 htod16p (PTPParams *params, uint16_t var)

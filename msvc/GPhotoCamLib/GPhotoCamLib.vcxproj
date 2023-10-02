@@ -165,6 +165,7 @@
     <ClCompile Include="..\..\camlibs\ptp2\olympus-wrap.c" />
     <ClCompile Include="..\..\camlibs\ptp2\ptp-pack.c" />
     <ClCompile Include="..\..\camlibs\ptp2\ptp.c" />
+    <ClCompile Include="..\..\camlibs\ptp2\ptpip.c" />
     <ClCompile Include="..\..\camlibs\ptp2\usb.c" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="pch.cpp">

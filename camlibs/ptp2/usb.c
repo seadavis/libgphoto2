@@ -22,10 +22,11 @@
  */
 
 #define _DEFAULT_SOURCE
+#include "gphoto-endian.h"
 #include "ptp.h"
 #include "ptp-private.h"
 #include "ptp-bugs.h"
-
+#include "ptp-pack.c"
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>

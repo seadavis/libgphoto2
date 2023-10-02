@@ -31,7 +31,7 @@
 #define _DEFAULT_SOURCE
 #define _DARWIN_C_SOURCE
 
-
+#include "gphoto-endian.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -129,7 +129,7 @@ ptp_ptpip_sendreq (PTPParams* params, PTPContainer* req, int dataphase)
 	default:
 		break;
 	}
-	GP_LOG_DATA ( (char*)request, len, "ptpip/oprequest data:");
+	//GP_LOG_DATA ( (char*)request, len, "ptpip/oprequest data:");
 	ret = ptpip_write_with_timeout(params->cmdfd, request, len, PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	free (request);
 	if (ret == PTPSOCK_ERR) {
@@ -159,7 +159,7 @@ ptp_ptpip_generic_read (PTPParams *params, int fd, PTPIPHeader *hdr, unsigned ch
 				return PTP_ERROR_TIMEOUT;
 			return PTP_ERROR_IO;
 		}
-		GP_LOG_DATA ((char*)xhdr+curread, ret, "ptpip/generic_read header:");
+		//GP_LOG_DATA ((char*)xhdr+curread, ret, "ptpip/generic_read header:");
 		curread += ret;
 		if (ret == 0) {
 			GP_LOG_E ("End of stream after reading %d bytes of ptpipheader", ret);
@@ -186,7 +186,7 @@ ptp_ptpip_generic_read (PTPParams *params, int fd, PTPIPHeader *hdr, unsigned ch
 				return PTP_ERROR_TIMEOUT;
 			return PTP_ERROR_IO;
 		} else {
-			GP_LOG_DATA ((char*)((*data)+curread), ret, "ptpip/generic_read data:");
+			//GP_LOG_DATA ((char*)((*data)+curread), ret, "ptpip/generic_read data:");
 		}
 		if (ret == 0)
 			break;
@@ -247,7 +247,7 @@ ptp_ptpip_senddata (PTPParams* params, PTPContainer* ptp,
 	htod32a(&request[ptpip_startdata_transid  + 8],ptp->Transaction_ID);
 	htod32a(&request[ptpip_startdata_totallen + 8],size);
 	htod32a(&request[ptpip_startdata_unknown  + 8],0);
-	GP_LOG_DATA ((char*)request, sizeof(request), "ptpip/senddata header:");
+	//GP_LOG_DATA ((char*)request, sizeof(request), "ptpip/senddata header:");
 	ret = ptpip_write_with_timeout (params->cmdfd, request, sizeof(request), PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	if (ret == PTPSOCK_ERR) {
 		ptpip_perror ("sendreq/write to cmdfd");
@@ -284,7 +284,7 @@ ptp_ptpip_senddata (PTPParams* params, PTPContainer* ptp,
 		htod32a(&xdata[ptpip_type], type);
 		htod32a(&xdata[ptpip_len], towrite2);
 		htod32a(&xdata[ptpip_data_transid+8], ptp->Transaction_ID);
-		GP_LOG_DATA ((char*)xdata, towrite2, "ptpip/senddata data:");
+		//GP_LOG_DATA ((char*)xdata, towrite2, "ptpip/senddata data:");
 		written = 0;
 		while (written < towrite2) {
 			ret = ptpip_write_with_timeout (params->cmdfd, xdata+written, towrite2-written, PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
@@ -466,7 +466,7 @@ ptp_ptpip_init_command_request (PTPParams* params)
 	htod16a(&cmdrequest[ptpip_initcmd_name+(strlen(hostname)+1)*2],PTPIP_VERSION_MINOR);
 	htod16a(&cmdrequest[ptpip_initcmd_name+(strlen(hostname)+1)*2+2],PTPIP_VERSION_MAJOR);
 
-	GP_LOG_DATA ((char*)cmdrequest, len, "ptpip/init_cmd data:");
+	//GP_LOG_DATA ((char*)cmdrequest, len, "ptpip/init_cmd data:");
 	ret = ptpip_write_with_timeout (params->cmdfd, cmdrequest, len, PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	free (cmdrequest);
 	if (ret == PTPSOCK_ERR) {
@@ -529,7 +529,7 @@ ptp_ptpip_init_event_request (PTPParams* params)
 	htod32a(&evtrequest[ptpip_len],ptpip_eventinit_size);
 	htod32a(&evtrequest[ptpip_eventinit_idx],params->eventpipeid);
 
-	GP_LOG_DATA ((char*)evtrequest, ptpip_eventinit_size, "ptpip/init_event data:");
+	//GP_LOG_DATA ((char*)evtrequest, ptpip_eventinit_size, "ptpip/init_event data:");
 	ret = ptpip_write_with_timeout (params->evtfd, evtrequest, ptpip_eventinit_size, PTPIP_DEFAULT_TIMEOUT_S, PTPIP_DEFAULT_TIMEOUT_MS);
 	if (ret == PTPSOCK_ERR) {
 		ptpip_perror("write init evt request");

@@ -2,6 +2,35 @@
 /* The i386 and compatibles can handle unaligned memory access, */
 /* so use the optimized macros above to do this job */
 
+#ifdef __HAVE_NTOHL
+# define swap16(x)	htons(x)
+# define swap32(x)	htonl(x)
+#else
+# define swap16(x)	((uint16_t)(((x) << 8) | ((uint16_t)(x) >> 8)))
+# define swap32(x)	((uint32_t)((((uint32_t)(x) << 24) & 0xff000000UL) |  (((uint32_t)(x) << 8)  & 0x00ff0000UL) |   (((x) >> 8)  & 0x0000ff00UL) | (((x) >> 24) & 0x000000ffUL)))
+#endif
+/* No optimized 64 bit byte swapping macro is available */
+#define swap64(x) ((uint64_t)((((uint64_t)(x) << 56) & 0xff00000000000000ULL) |  (((uint64_t)(x) << 40) & 0x00ff000000000000ULL) | (((uint64_t)(x) << 24) & 0x0000ff0000000000ULL) |  (((uint64_t)(x) << 8)  & 0x000000ff00000000ULL) |  (((x) >> 8)  & 0x00000000ff000000ULL) |  (((x) >> 24) & 0x0000000000ff0000ULL) | (((x) >> 40) & 0x000000000000ff00ULL) |  (((x) >> 56) & 0x00000000000000ffULL)))
+
+#ifndef htole16
+# define htole16(x)      swap16(x)
+#endif
+#ifndef htole32
+# define htole32(x)      swap32(x)
+#endif
+#ifndef htole64
+# define htole64(x)      swap64(x)
+#endif
+#ifndef le16toh
+# define le16toh(x)      swap16(x)
+#endif
+#ifndef le32toh
+# define le32toh(x)      swap32(x)
+#endif
+#ifndef le64toh
+# define le64toh(x)      swap64(x)
+#endif
+
 #define be16atoh(x)     ((uint16_t)(((x)[0]<<8)|(x)[1]))
 #define be32atoh(x)     ((uint32_t)(((x)[0]<<24)|((x)[1]<<16)|((x)[2]<<8)|(x)[3]))
 #define be64atoh_x(x,off,shift) 	(((uint64_t)((x)[off]))<<shift)

@@ -27,6 +27,7 @@
 #define ssize_t size_t
 
 #include "ptp.h"
+#include "ptp-pack.c"
 
 #ifdef HAVE_LIBXML2
 # include <libxml/parser.h>

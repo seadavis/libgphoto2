@@ -20,6 +20,7 @@
 
 #ifndef CAMLIBS_PTP2_PTPIP_PRIVATE_H
 #define CAMLIBS_PTP2_PTPIP_PRIVATE_H
+#define WIN32
 
 /* Definitions for PTP/IP to work with WinSock and regular BSD-style sockets */
 #ifdef WIN32
