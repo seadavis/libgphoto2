@@ -1,0 +1,1 @@
+C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhoto.lib

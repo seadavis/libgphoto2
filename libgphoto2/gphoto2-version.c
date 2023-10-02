@@ -21,11 +21,13 @@
  * Boston, MA  02110-1301  USA
  */
 
-#include "config.h"
+
 
 #include <stdlib.h>
 
 #include <gphoto2/gphoto2-version.h>
+
+#define GP_CAMLIB_SET "GPhotoCamLib.dll"
 
 const char **gp_library_version(GPVersionVerbosity verbose)
 {
@@ -33,7 +35,7 @@ const char **gp_library_version(GPVersionVerbosity verbose)
 	   ones, but the current method is easier for now :-) */
 	static const char *shrt[] =
 		{
-			PACKAGE_VERSION,
+
 #ifdef GP_CAMLIB_SET_IS_NONSTANDARD
 			"NON-STANDARD CAMLIB SET"
 			" ("
@@ -71,7 +73,6 @@ const char **gp_library_version(GPVersionVerbosity verbose)
 		};
 	static const char *verb[] =
 		{
-			PACKAGE_VERSION,
 #ifdef GP_CAMLIB_SET_IS_NONSTANDARD
 			"NON-STANDARD CAMLIB SET"
 #ifdef GP_CAMLIB_SET_SKIPPING

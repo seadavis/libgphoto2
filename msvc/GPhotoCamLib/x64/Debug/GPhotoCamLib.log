@@ -1,54 +1,83 @@
-﻿  pch.cpp
-  chdk.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\chdk.c(1383,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  config.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(52,1): warning C4005: '__unused__': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(50,1): message : see previous definition of '__unused__'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(8553,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(1154,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11644,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(8553,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11682,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11644,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11706,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11682,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11737,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11706,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12032,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11737,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12289,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12032,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12311,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  fujiptpip.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\fujiptpip.c(1015,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  library.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\library.c(7633,1): warning C4005: 'SPACE_LEFT': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\library.c(7468,1): message : see previous definition of 'SPACE_LEFT'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\library.c(10226,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  n-param-test.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\n-param-test.c(117,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  olympus-wrap.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\olympus-wrap.c(1416,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  ptp-pack.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(1216,1): warning C4005: 'N': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(974,1): message : see previous definition of 'N'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2252,1): warning C4005: 'XX': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2188,1): message : see previous definition of 'XX'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2890,1): warning C4005: 'XX': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2252,1): message : see previous definition of 'XX'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(3312,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  ptp.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(53,1): warning C4005: 'N_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(51,1): message : see previous definition of 'N_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(61,1): warning C4005: '_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(49,1): message : see previous definition of '_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(9900,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  ptpip.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptpip.c(998,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  usb.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(46,1): warning C4005: 'N_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(44,1): message : see previous definition of 'N_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(54,1): warning C4005: '_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(42,1): message : see previous definition of '_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(710,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  Generating Code...
+﻿chdk.obj : error LNK2019: unresolved external symbol le32atoh referenced in function chdk_generic_script_run
+library.obj : error LNK2001: unresolved external symbol le32atoh
+chdk.obj : error LNK2019: unresolved external symbol usleep referenced in function chdk_generic_script_run
+config.obj : error LNK2001: unresolved external symbol usleep
+library.obj : error LNK2001: unresolved external symbol usleep
+ptp.obj : error LNK2001: unresolved external symbol usleep
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_connect referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_disconnect referenced in function camera_exit
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_sendreq referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_senddata referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_getresp referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_getdata referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_event_wait referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_event_check referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_ptpip_event_check_queue referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_connect referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_init_event referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_sendreq referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_senddata referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_getresp referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_getdata referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_event_wait referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_event_check referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_event_check_queue referenced in function camera_init
+library.obj : error LNK2019: unresolved external symbol ptp_fujiptpip_jpeg referenced in function camera_capture_preview
+library.obj : error LNK2019: unresolved external symbol be32atoh referenced in function dtoh32ap
+library.obj : error LNK2019: unresolved external symbol gettimeofday referenced in function time_now
+ptp.obj : error LNK2019: unresolved external symbol ptp_nikon_getptpipguid referenced in function ptp_nikon_writewifiprofile
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_DI referenced in function ptp_getdeviceinfo
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_EOS_DI referenced in function ptp_canon_eos_getdeviceinfo
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_StreamInfo referenced in function ptp_getstreaminfo
+ptp.obj : error LNK2019: unresolved external symbol dtoh32a referenced in function ptp_canon_eos_getobjectinfoex
+ptp.obj : error LNK2019: unresolved external symbol dtoh16a referenced in function ptp_fuji_getevents
+ptp.obj : error LNK2019: unresolved external symbol htod32a referenced in function ptp_canon_eos_setdevicepropvalue
+ptp.obj : error LNK2019: unresolved external symbol htod16a referenced in function ptp_canon_eos_setdevicepropvalue
+ptp.obj : error LNK2019: unresolved external symbol ptp_free_DI referenced in function ptp_free_params
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_SIDs referenced in function ptp_canon_eos_getstorageids
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_SI referenced in function ptp_getstorageinfo
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_OH referenced in function ptp_getobjecthandles
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_ptp11_manifest referenced in function ptp_getfilesystemmanifest
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_OI referenced in function ptp_getobjectinfo
+ptp.obj : error LNK2019: unresolved external symbol dtoh64ap referenced in function ptp_nikon_getobjectsize
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_OI referenced in function ptp_ek_sendfileobjectinfo
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_DPD referenced in function ptp_fuji_getdeviceinfo
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_DPV referenced in function ptp_getdevicepropvalue
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_DPV referenced in function ptp_mtp_setobjectpropvalue
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_EK_text referenced in function ptp_ek_settext
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_canon_directory referenced in function ptp_canon_get_directory
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_string referenced in function ptp_canon_gettreesize
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_EC referenced in function ptp_canon_checkevent
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_CANON_changes referenced in function ptp_canon_eos_getevent
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_Canon_EOS_FE referenced in function ptp_canon_eos_getobjectinfoex
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_EOS_ImageFormat referenced in function ptp_canon_eos_setdevicepropvalue
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_EOS_CustomFuncEx referenced in function ptp_canon_eos_setdevicepropvalue
+ptp.obj : error LNK2019: unresolved external symbol htod8a referenced in function ptp_canon_eos_setdevicepropvalue
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_uint16_t_array referenced in function ptp_canon_getchanges
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_Canon_FE referenced in function ptp_canon_getobjectinfo
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_string referenced in function ptp_canon_get_objecthandle_by_name
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_Sony_DPD referenced in function _ptp_sony_getalldevicepropdesc
+ptp.obj : error LNK2019: unresolved external symbol duplicate_DevicePropDesc referenced in function ptp_generic_getdevicepropdesc
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_Nikon_EC referenced in function ptp_nikon_check_event
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_Nikon_EC_EX referenced in function ptp_nikon_check_eventex
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_OPD referenced in function ptp_mtp_getobjectpropdesc
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_uint32_t_array referenced in function ptp_mtp_getobjectreferences
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_uint32_t_array referenced in function ptp_mtp_setobjectreferences
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_OPL referenced in function ptp_mtp_getobjectproplist_generic
+ptp.obj : error LNK2019: unresolved external symbol ptp_pack_OPL referenced in function ptp_mtp_sendobjectproplist
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_chdk_lv_data_header referenced in function ptp_chdk_parse_live_data
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_chdk_lv_framebuffer_desc referenced in function ptp_chdk_parse_live_data
+ptp.obj : error LNK2019: unresolved external symbol ptp_unpack_PTPTIME referenced in function ptp_object_want
+usb.obj : error LNK2019: unresolved external symbol htole16 referenced in function htod16p
+usb.obj : error LNK2019: unresolved external symbol htobe16 referenced in function htod16p
+usb.obj : error LNK2019: unresolved external symbol htole32 referenced in function htod32p
+usb.obj : error LNK2019: unresolved external symbol htobe32 referenced in function htod32p
+usb.obj : error LNK2019: unresolved external symbol htole16a referenced in function htod16ap
+usb.obj : error LNK2019: unresolved external symbol htobe16a referenced in function htod16ap
+usb.obj : error LNK2019: unresolved external symbol htole32a referenced in function htod32ap
+usb.obj : error LNK2019: unresolved external symbol htobe32a referenced in function htod32ap
+usb.obj : error LNK2019: unresolved external symbol le16toh referenced in function dtoh16p
+usb.obj : error LNK2019: unresolved external symbol be16toh referenced in function dtoh16p
+usb.obj : error LNK2019: unresolved external symbol le32toh referenced in function dtoh32p
+usb.obj : error LNK2019: unresolved external symbol be32toh referenced in function dtoh32p
+C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhotoCamLib.dll : fatal error LNK1120: 78 unresolved externals

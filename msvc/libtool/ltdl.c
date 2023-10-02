@@ -6,7 +6,7 @@ int lt_dlopenext(const char* filename)
     return 0;
 }
 
-const char* ltdl_error()
+const char* lt_dlerror()
 {
     return "";
 }
@@ -20,4 +20,31 @@ void* lt_dlsym(lt_dlhandle handle, char* functionName)
 {
 
 
+}
+
+int lt_dlclose(lt_dlhandle handle)
+{
+    return 0;
+}
+
+void lt_dlinit()
+{
+
+}
+
+void lt_dlexit()
+{
+
+}
+
+void lt_dladdsearchdir(const char* searchdir)
+{
+}
+
+void gpi_libltdl_lock()
+{
+}
+
+void gpi_libltdl_unlock()
+{
 }

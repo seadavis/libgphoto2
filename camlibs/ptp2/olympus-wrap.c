@@ -23,7 +23,7 @@
 
 #define _DEFAULT_SOURCE
 
-#include "config.h"
+
 
 #ifdef HAVE_LIBXML2
 
@@ -379,7 +379,7 @@ ums_wrap_getdata (PTPParams* params, PTPContainer* ptp, PTPDataHandler *putter)
 	GP_LOG_D ("send_scsi_cmd 2 ret  %d", ret);
 	/* skip away the 12 byte header */
 	if (recvlen >= 16)
-		GP_LOG_DATA (data + PTP_USB_BULK_HDR_LEN, recvlen - PTP_USB_BULK_HDR_LEN, "ptp2/olympus/getdata");
+		//GP_LOG_DATA (data + PTP_USB_BULK_HDR_LEN, recvlen - PTP_USB_BULK_HDR_LEN, "ptp2/olympus/getdata");
 	ret = putter->putfunc ( params, putter->priv, recvlen - PTP_USB_BULK_HDR_LEN, (unsigned char*)data + PTP_USB_BULK_HDR_LEN);
 	free (data);
 	if (ret != PTP_RC_OK) {

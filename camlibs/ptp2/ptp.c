@@ -23,7 +23,9 @@
  */
 
 #define _DEFAULT_SOURCE
-#include "config.h"
+
+#define ssize_t size_t
+
 #include "ptp.h"
 
 #ifdef HAVE_LIBXML2
@@ -40,6 +42,7 @@
 #ifdef HAVE_UNISTD_H
 # include <unistd.h>
 #endif
+
 
 #include "libgphoto2_port/compiletime-assert.h"
 
@@ -173,8 +176,6 @@ ptp_error (PTPParams *params, const char *format, ...)
 }
 
 /* Pack / unpack functions */
-
-#include "ptp-pack.c"
 
 /* major PTP functions */
 

@@ -26,11 +26,13 @@
 #include <stdarg.h>
 #include <string.h>
 #include <time.h>
-#include <sys/time.h>
+#include <inttypes.h>
+#include <winsock.h>
+
 #if defined(HAVE_ICONV) && defined(HAVE_LANGINFO_H)
 #include <iconv.h>
 #endif
-#include "libgphoto2/gphoto2-endian.h"
+
 #include "device-flags.h"
 
 #ifdef __cplusplus

@@ -24,8 +24,7 @@
  */
 
 #define _DEFAULT_SOURCE
-
-#include "config.h"
+#pragma warning(disable : 4996)
 
 #include <stdarg.h>
 #include <stdlib.h>
@@ -49,9 +48,9 @@
 
 #define LOG_DATA(DATA, SIZE, EXPECTED, MSG_PRE, MSG_POST, ...) \
 	if (SIZE != EXPECTED) \
-		GP_LOG_DATA (DATA, SIZE, MSG_PRE " %i = 0x%x out of %i bytes " MSG_POST, SIZE, SIZE, EXPECTED, ##__VA_ARGS__); \
+		gp_log_data (DATA, SIZE, MSG_PRE " %i = 0x%x out of %i bytes " MSG_POST, SIZE, SIZE, EXPECTED, ##__VA_ARGS__); \
 	else \
-		GP_LOG_DATA (DATA, SIZE, MSG_PRE " %i = 0x%x bytes " MSG_POST, SIZE, SIZE, ##__VA_ARGS__)
+		gp_log_data (DATA, SIZE, MSG_PRE " %i = 0x%x bytes " MSG_POST, SIZE, SIZE, ##__VA_ARGS__)
 
 
 /**
@@ -210,6 +209,7 @@ gp_port_set_info (GPPort *port, GPPortInfo info)
 			GP_LOG_E ("Path is too long for static buffer '%s'.", info->path);
 			return GP_ERROR_LIBRARY;
 		}
+#pragma warning(suppress : 4996)
 		strncpy (port->settings.usb.port, info->path,
 			 sizeof (port->settings.usb.port));
 		port->settings.usb.inep = -1;
@@ -866,7 +866,7 @@ gp_port_usb_msg_write (GPPort *port, int request, int value, int index,
 {
         int retval;
 
-	GP_LOG_DATA (bytes, size, "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x):",
+	gp_log_data (bytes, size, "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x):",
 		     request, value, index, size, size);
 
 	C_PARAMS (port);
@@ -939,7 +939,7 @@ gp_port_usb_msg_interface_write (GPPort *port, int request,
 {
         int retval;
 
-	GP_LOG_DATA (bytes, size, "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x)...",
+	gp_log_data (bytes, size, "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x)...",
 		     request, value, index, size, size);
 
 	C_PARAMS (port);
@@ -1017,7 +1017,7 @@ gp_port_usb_msg_class_write (GPPort *port, int request,
 {
         int retval;
 
-	GP_LOG_DATA (bytes, size, "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x):",
+	gp_log_data (bytes, size, "Writing message (request=0x%x value=0x%x index=0x%x size=%i=0x%x):",
 		     request, value, index, size, size);
 
 	C_PARAMS (port);
@@ -1122,9 +1122,9 @@ int gp_port_send_scsi_cmd (GPPort *port, int to_dev,
 {
 	int retval;
 
-	GP_LOG_DATA (cmd, cmd_size, "Sending scsi cmd:");
+	GP_LOG_D(cmd, cmd_size, "Sending scsi cmd:");
 	if (to_dev && data_size)
-		GP_LOG_DATA (data, data_size, "with scsi cmd data:");
+		GP_LOG_D(data, data_size, "with scsi cmd data:");
 
 	C_PARAMS (port);
 	CHECK_INIT (port);
@@ -1137,7 +1137,7 @@ int gp_port_send_scsi_cmd (GPPort *port, int to_dev,
 	GP_LOG_D ("scsi cmd result: %d", retval);
 
 	if (sense[0] != 0) {
-		GP_LOG_DATA (sense, sense_size, "sense data:");
+		GP_LOG_D(sense, sense_size, "sense data:");
 		/* https://secure.wikimedia.org/wikipedia/en/wiki/Key_Code_Qualifier */
 		GP_LOG_D ("sense decided:");
 		if ((sense[0]&0x7f)!=0x70) {
@@ -1161,7 +1161,7 @@ int gp_port_send_scsi_cmd (GPPort *port, int to_dev,
 	}
 
 	if (!to_dev && data_size)
-		GP_LOG_DATA (data, data_size, "scsi cmd data:");
+		GP_LOG_D(data, data_size, "scsi cmd data:");
 
 	return retval;
 }

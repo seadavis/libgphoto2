@@ -28,7 +28,7 @@
 #define _DEFAULT_SOURCE
 #define _DARWIN_C_SOURCE
 
-#include "config.h"
+
 #include <gphoto2/gphoto2-file.h>
 
 #include <stdlib.h>
@@ -36,8 +36,8 @@
 #include <errno.h>
 #include <string.h>
 #include <sys/stat.h>
-#include <utime.h>
-#include <unistd.h>
+#include <sys/utime.h>
+
 
 #include <gphoto2/gphoto2-port-log.h>
 #include <gphoto2/gphoto2-port-portability.h>
@@ -45,6 +45,7 @@
 #include <gphoto2/gphoto2-result.h>
 
 #define CHECK_RESULT(result) {int r = (result); if (r < 0) return (r);}
+#define ftruncate _chsize_s
 
 /* length of one path component */
 #ifndef MAX_PATH

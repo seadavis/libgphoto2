@@ -22,6 +22,7 @@
  */
 #define _GNU_SOURCE
 #define _DARWIN_C_SOURCE
+#define _GPHOTO2_INTERNAL_CODE
 
 #include "../../msvc/GPhotoPort/pch.h"
 #include <gphoto2/gphoto2-port-info-list.h>
@@ -308,8 +309,8 @@ foreach_func (const char *filename, lt_ptr data)
 int
 gp_port_info_list_load (GPPortInfoList *list)
 {
-	const char *iolibs_env = getenv(IOLIBDIR_ENV);
-	const char *iolibs = (iolibs_env != NULL)?iolibs_env:IOLIBS;
+
+	const char *iolibs = "C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhotoCamLib\x64\Debug";
 	int result;
 
 	C_PARAMS (list);

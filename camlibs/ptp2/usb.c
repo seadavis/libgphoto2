@@ -22,7 +22,6 @@
  */
 
 #define _DEFAULT_SOURCE
-#include <config.h>
 #include "ptp.h"
 #include "ptp-private.h"
 #include "ptp-bugs.h"

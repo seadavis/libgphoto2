@@ -23,6 +23,7 @@
 
 #define _DEFAULT_SOURCE
 
+
 #include <gphoto2/gphoto2-port-log.h>
 
 #include <stdlib.h>

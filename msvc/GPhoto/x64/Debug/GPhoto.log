@@ -1,54 +1,58 @@
 ﻿  pch.cpp
-  chdk.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\chdk.c(1383,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  config.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(52,1): warning C4005: '__unused__': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(50,1): message : see previous definition of '__unused__'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(8553,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(1154,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11644,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(8553,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11682,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11644,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11706,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11682,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11737,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11706,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12032,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(11737,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12289,1): warning C4005: 'X': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12032,1): message : see previous definition of 'X'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\config.c(12311,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  fujiptpip.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\fujiptpip.c(1015,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  library.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\library.c(7633,1): warning C4005: 'SPACE_LEFT': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\library.c(7468,1): message : see previous definition of 'SPACE_LEFT'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\library.c(10226,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  n-param-test.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\n-param-test.c(117,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  olympus-wrap.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\olympus-wrap.c(1416,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  ptp-pack.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(1216,1): warning C4005: 'N': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(974,1): message : see previous definition of 'N'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2252,1): warning C4005: 'XX': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2188,1): message : see previous definition of 'XX'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2890,1): warning C4005: 'XX': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(2252,1): message : see previous definition of 'XX'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp-pack.c(3312,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  ptp.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(53,1): warning C4005: 'N_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(51,1): message : see previous definition of 'N_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(61,1): warning C4005: '_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(49,1): message : see previous definition of '_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptp.c(9900,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  ptpip.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\ptpip.c(998,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  usb.c
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(46,1): warning C4005: 'N_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(44,1): message : see previous definition of 'N_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(54,1): warning C4005: '_': macro redefinition
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(42,1): message : see previous definition of '_'
-C:\Software Projects\Copied Repos\libgphoto2\camlibs\ptp2\usb.c(710,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+  ahd_bayer.c
+  bayer.c
+  exif.c
+  gamma.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gamma.c(83,18): warning C4244: '=': conversion from 'double' to 'unsigned char', possible loss of data
+  gphoto2-abilities-list.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(235,42): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(243,31): warning C4047: '=': 'lt_dlhandle' differs in levels of indirection from 'int'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(308,43): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(350,24): warning C4129: 'S': unrecognized character escape sequence
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(350,24): warning C4129: 'C': unrecognized character escape sequence
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(350,24): warning C4129: 'l': unrecognized character escape sequence
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(350,24): warning C4129: 'm': unrecognized character escape sequence
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(350,24): warning C4129: 'G': unrecognized character escape sequence
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(350,24): warning C4129: 'D': unrecognized character escape sequence
+  gphoto2-camera.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-camera.c(785,55): warning C4047: '=': 'lt_dlhandle' differs in levels of indirection from 'int'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-camera.c(791,4): warning C4013: 'lt_dlerror' undefined; assuming extern returning int
+  gphoto2-context.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-context.c(168,8): warning C4013: 'gpi_vsnprintf' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-context.c(168,35): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-context.c(209,35): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-context.c(230,35): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-context.c(263,35): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-context.c(298,35): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+  gphoto2-file.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(157,3): warning C4013: 'close' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(222,18): warning C4013: 'write' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(231,18): warning C4244: '+=': conversion from 'ssize_t' to 'unsigned long', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(267,19): warning C4267: '+=': conversion from 'size_t' to 'unsigned long', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(273,18): warning C4013: 'read' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(282,15): warning C4244: '+=': conversion from 'ssize_t' to 'unsigned long', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(331,13): warning C4013: 'lseek' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(335,13): warning C4013: '_chsize_s' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(349,18): warning C4244: '+=': conversion from 'ssize_t' to 'unsigned int', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(448,15): warning C4244: '+=': conversion from 'ssize_t' to 'off_t', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(462,21): warning C4244: '=': conversion from 'uint64_t' to 'unsigned long', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(633,15): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(645,15): warning C4013: 'dup' undefined; assuming extern returning int
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(790,15): warning C4244: '+=': conversion from 'ssize_t' to 'off_t', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(861,18): warning C4244: '+=': conversion from 'uint64_t' to 'unsigned long', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-file.c(943,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  gphoto2-filesys.c
+  gphoto2-library.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-library.c(85,1): warning C4029: declared formal parameter list different from definition
+  gphoto2-list.c
+  gphoto2-result.c
+  gphoto2-setting.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-setting.c(179,48): warning C4133: 'function': incompatible types - from 'char [1024]' to 'LPWSTR'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-setting.c(189,48): warning C4133: 'function': incompatible types - from 'char [1024]' to 'LPWSTR'
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-setting.c(236,48): warning C4133: 'function': incompatible types - from 'char [1024]' to 'LPWSTR'
+  gphoto2-version.c
+  gphoto2-widget.c
+  jpeg.c
   Generating Code...
+  dllmain.cpp
+  GPhoto.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhoto.lib

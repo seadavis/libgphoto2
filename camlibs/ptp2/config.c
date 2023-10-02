@@ -18,7 +18,7 @@
  * Boston, MA  02110-1301  USA
  */
 #define _DEFAULT_SOURCE
-#include "config.h"
+#define WIN32
 
 #include <math.h>
 #include <stdlib.h>
@@ -33,7 +33,7 @@
 # include <arpa/inet.h>
 #endif
 #include <sys/types.h>
-#include <unistd.h>
+
 
 #include <gphoto2/gphoto2-library.h>
 #include <gphoto2/gphoto2-port-log.h>

@@ -17,3 +17,14 @@ int	    lt_dlforeachfile(
 	const char* search_path,
 	int (*func) (const char* filename, void* data),
 	void* data);
+
+
+void lt_dlinit();
+
+void lt_dlexit();
+
+void lt_dladdsearchdir(const char*);
+
+void gpi_libltdl_lock();
+
+void gpi_libltdl_unlock();

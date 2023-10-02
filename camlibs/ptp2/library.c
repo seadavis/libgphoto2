@@ -23,18 +23,16 @@
 
 #define _DEFAULT_SOURCE
 #define _DARWIN_C_SOURCE
-#include "config.h"
+
 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <time.h>
-#include <sys/time.h>
 #if defined(HAVE_ICONV) && defined(HAVE_LANGINFO_H)
 #include <langinfo.h>
 #endif
-#include <unistd.h>
 
 #include <gphoto2/gphoto2-library.h>
 #include <gphoto2/gphoto2-port-log.h>
@@ -2852,9 +2850,8 @@ static struct {
 	unsigned short usb_product;
 	unsigned long flags;
 } mtp_models[] = {
-#ifndef FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
-#include "music-players.h"
-#endif
+
+ "music-players.h"
 };
 
 static struct {
@@ -3594,7 +3591,7 @@ camera_capture_preview (Camera *camera, CameraFile *file, GPContext *context)
 							len = size;
 							GP_LOG_E ("len=%d larger than rest size %ld", len, (size-(xdata-data)));
 						}
-						GP_LOG_DATA ((char*)xdata, len, "get_viewfinder_image header:");
+						//GP_LOG_D ((char*)xdata, len, "get_viewfinder_image header:");
 						xdata = xdata+len;
 						continue;
 					case 9:
@@ -3625,7 +3622,7 @@ camera_capture_preview (Camera *camera, CameraFile *file, GPContext *context)
 								break;
 							}
 							GP_LOG_D ("get_viewfinder_image header: len=%d type=%d", len, type);
-							GP_LOG_DATA ((char*)xdata, len, "get_viewfinder_image header:");
+							////GP_LOG_DATA ((char*)xdata, len, "get_viewfinder_image header:");
 							xdata = xdata+len;
 						}
 						free (data);
@@ -10055,43 +10052,43 @@ camera_init (Camera *camera, GPContext *context)
 			unsigned char *xdata = NULL;
 			unsigned int xsize = 0;
 			C_PTP (ptp_sigma_fp_9035 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "9035 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "9035 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getcamcansetinfo5 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getcamcansetinfo5 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getcamcansetinfo5 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getdatagroup1 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup1 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup1 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getdatagroup2 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup2 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup2 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getdatagroup3 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup3 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup3 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getdatagroup4 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup4 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup4 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getdatagroup5 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup5 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup5 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getdatagroup6 (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup6 output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroup6 output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getcamdatagroupfocus (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroupfocus output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroupfocus output");
 			free (xdata);
 
 			C_PTP (ptp_sigma_fp_getcamdatagroupmovie (params, &xdata, &xsize));
-			GP_LOG_DATA ((char*)xdata, xsize, "getdatagroupmovie output");
+			//GP_LOG_DATA ((char*)xdata, xsize, "getdatagroupmovie output");
 			free (xdata);
 		}
 		break;

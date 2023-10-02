@@ -20,7 +20,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#include "config.h"
+
 #include "libgphoto2/jpeg.h"
 
 #include <stdio.h>

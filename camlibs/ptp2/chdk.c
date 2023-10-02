@@ -18,7 +18,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#include "config.h"
+
 
 #include <stdlib.h>
 #include <math.h>
@@ -26,7 +26,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <time.h>
-#include <unistd.h>
+
 
 #ifdef HAVE_LIBJPEG
 #  include <jpeglib.h>

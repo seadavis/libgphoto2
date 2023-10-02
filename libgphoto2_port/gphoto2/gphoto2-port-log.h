@@ -69,6 +69,31 @@ typedef void (* GPLogFunc) (GPLogLevel level, const char *domain, const char *st
 int  gp_log_add_func    (GPLogLevel level, GPLogFunc func, void *data);
 int  gp_log_remove_func (int id);
 
+#define GP_DEBUG(...) /* no-op */
+#define GP_LOG_D(...) /* no-op */
+#define GP_LOG_E(...) /* no-op */
+
+#define C_MEM(MEM) do {\
+	if ((MEM) == NULL) {\
+		GP_LOG_E ("Out of memory: '%s' failed.", #MEM);\
+		return GP_ERROR_NO_MEMORY;\
+	}\
+} while(0)
+
+#define C_PARAMS(PARAMS) do {\
+	if (!(PARAMS)) {\
+		GP_LOG_E ("Invalid parameters: '%s' is NULL/FALSE.", #PARAMS);\
+		return GP_ERROR_BAD_PARAMETERS;\
+	}\
+} while(0)
+
+#define C_PARAMS_MSG(PARAMS, MSG, ...) do {\
+	if (!(PARAMS)) {\
+		GP_LOG_E ("Invalid parameters: " #MSG " ('%s' is NULL/FALSE.)", ##__VA_ARGS__, #PARAMS);\
+		return GP_ERROR_BAD_PARAMETERS;\
+	}\
+} while(0)
+
 /* Logging */
 void gp_log      (GPLogLevel level, const char *domain,
 		  const char *format, ...)
@@ -119,7 +144,7 @@ __attribute__((__format__(printf,4,5)))
  */
 #define GP_LOG_D(...) gp_log(GP_LOG_DEBUG, __func__, __VA_ARGS__)
 #define GP_LOG_E(...) gp_log_with_source_location(GP_LOG_ERROR, __FILE__, __LINE__, __func__, __VA_ARGS__)
-#define GP_LOG_DATA(DATA, SIZE, MSG, ...) gp_log_data(__func__, DATA, SIZE, MSG, ##__VA_ARGS__)
+#define gp_log_data(DATA, SIZE, MSG, ...) gp_log_data(__func__, DATA, SIZE, MSG, ##__VA_ARGS__)
 
 #elif defined(__GNUC__) &&  __GNUC__ >= 2
 #define GP_DEBUG(msg, params...) \
@@ -131,7 +156,7 @@ __attribute__((__format__(printf,4,5)))
  */
 #define GP_LOG_D(...) gp_log(GP_LOG_DEBUG, __func__, __VA_ARGS__)
 #define GP_LOG_E(...) gp_log_with_source_location(GP_LOG_ERROR, __FILE__, __LINE__, __func__, __VA_ARGS__)
-#define GP_LOG_DATA(DATA, SIZE, MSG, ...) gp_log_data(__func__, DATA, SIZE, MSG, ##__VA_ARGS__)
+
 
 #else
 # ifdef __GNUC__
@@ -140,7 +165,7 @@ __attribute__((__format__(printf,4,5)))
 #define GP_DEBUG (void)
 #define GP_LOG_D(...) /* no-op */
 #define GP_LOG_E(...) /* no-op */
-#define GP_LOG_DATA(DATA, SIZE, ...) /* no-op */
+#define gp_log_data(DATA, SIZE, ...) /* no-op */
 #endif
 #endif /* _GPHOTO2_INTERNAL_CODE */
 
@@ -156,21 +181,19 @@ __attribute__((__format__(printf,4,5)))
 
 #ifdef _GPHOTO2_INTERNAL_CODE
 #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
-#define GP_DEBUG(...) /* no-op */
-#define GP_LOG_D(...) /* no-op */
-#define GP_LOG_E(...) /* no-op */
-#define GP_LOG_DATA(DATA, SIZE, ...) /* no-op */
+
+#define gp_log_data(DATA, SIZE, ...) /* no-op */
 
 #elif defined(__GNUC__)
 #define GP_DEBUG(msg, params...) /* no-op */
 #define GP_LOG_D(...) /* no-op */
 #define GP_LOG_E(...) /* no-op */
-#define GP_LOG_DATA(DATA, SIZE, ...) /* no-op */
+#define gp_log_data(DATA, SIZE, ...) /* no-op */
 #else
 #define GP_DEBUG (void)
 #define GP_LOG_D (void /* no-op */
 #define GP_LOG_E (void) /* no-op */
-#define GP_LOG_DATA(void) /* no-op */
+#define gp_log_data(void) /* no-op */
 #endif
 #endif /* _GPHOTO2_INTERNAL_CODE */
 
@@ -218,26 +241,7 @@ __attribute__((__format__(printf,4,5)))
   char*
   gpi_vsnprintf (const char* format, va_list args);
 
-#define C_MEM(MEM) do {\
-	if ((MEM) == NULL) {\
-		GP_LOG_E ("Out of memory: '%s' failed.", #MEM);\
-		return GP_ERROR_NO_MEMORY;\
-	}\
-} while(0)
 
-#define C_PARAMS(PARAMS) do {\
-	if (!(PARAMS)) {\
-		GP_LOG_E ("Invalid parameters: '%s' is NULL/FALSE.", #PARAMS);\
-		return GP_ERROR_BAD_PARAMETERS;\
-	}\
-} while(0)
-
-#define C_PARAMS_MSG(PARAMS, MSG, ...) do {\
-	if (!(PARAMS)) {\
-		GP_LOG_E ("Invalid parameters: " #MSG " ('%s' is NULL/FALSE.)", ##__VA_ARGS__, #PARAMS);\
-		return GP_ERROR_BAD_PARAMETERS;\
-	}\
-} while(0)
 
 #endif /* _GPHOTO2_INTERNAL_CODE */
 #ifdef __cplusplus

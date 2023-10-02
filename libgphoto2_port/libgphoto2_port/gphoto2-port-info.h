@@ -23,6 +23,8 @@
 
 #ifndef LIBGPHOTO2_GPHOTO2_PORT_INFO_H
 #define LIBGPHOTO2_GPHOTO2_PORT_INFO_H
+#define strdup _strdup
+#define snprintf _snprintf
 
 /**
  * \internal GPPortInfo:

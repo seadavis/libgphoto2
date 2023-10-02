@@ -24,8 +24,8 @@
  */
 
 #define _DEFAULT_SOURCE
+#define ssize_t size_t
 
-#include "config.h"
 #include <gphoto2/gphoto2-filesys.h>
 
 #include <stdlib.h>

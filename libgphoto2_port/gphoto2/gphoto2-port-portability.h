@@ -18,8 +18,6 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef LIBGPHOTO2_GPHOTO2_PORT_PORTABILITY_H
-#define LIBGPHOTO2_GPHOTO2_PORT_PORTABILITY_H
 
 
 /************************************************************************
@@ -35,9 +33,8 @@
 # include <stdio.h>
 # include <direct.h>
 
-# ifndef IOLIBS
-#  define IOLIBS			"."
-# endif
+#pragma once
+
 # define strcasecmp		_stricmp
 # ifndef snprintf
 #  define snprintf		_snprintf
@@ -70,57 +67,7 @@ typedef struct {
 
 
 
-/************************************************************************
- * End WIN32 definitions
- ************************************************************************/
 
-#else
-
-/************************************************************************
- * Begin POSIX/XOPEN definitions
- ************************************************************************/
-
-/* yummy. :) */
-
-/* XOPEN needed for usleep */
-#ifndef _XOPEN_SOURCE
-# define _XOPEN_SOURCE 500
-#else
-# if ((_XOPEN_SOURCE - 0) < 500)
-#  undef _XOPEN_SOURCE
-#  define _XOPEN_SOURCE 500
-# endif
-#endif
-
-/* for nanosleep */
-# ifndef _POSIX_C_SOURCE
-#  define _POSIX_C_SOURCE 199309
-# endif
-# include <time.h>
-
-# include <strings.h>
-# include <sys/types.h>
-# include <dirent.h>
-#ifdef HAVE_SYS_PARAM_H
-# include <sys/param.h>
-#endif
-# include <sys/stat.h>
-# include <unistd.h>
-
-
-/* Directory-oriented functions */
-/** A system directory handle */
-# define gp_system_dir           DIR *
-/** A system directory entry */
-# define gp_system_dirent	 struct dirent *
-/** The directory delimiter character on this platform. */
-# define gp_system_dir_delim	 '/'
-
-/************************************************************************
- * End POSIX/XOPEN definitions
- ************************************************************************/
-
-#endif /* else */
 
 
 /************************************************************************

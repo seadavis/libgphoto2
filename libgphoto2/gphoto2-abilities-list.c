@@ -23,7 +23,7 @@
  */
 #define _DARWIN_C_SOURCE
 
-#include "config.h"
+
 #include <gphoto2/gphoto2-abilities-list.h>
 
 #include <errno.h>
@@ -106,8 +106,8 @@ gp_init_localedir (const char *localedir)
 	if (gpp_result != GP_OK) {
 		return gpp_result;
 	}
-	const char *actual_localedir = (localedir?localedir:LOCALEDIR);
-	const char *const gettext_domain = GETTEXT_PACKAGE_LIBGPHOTO2;
+	const char *actual_localedir = "";
+	const char *const gettext_domain = "";
 	if (bindtextdomain (gettext_domain, actual_localedir) == NULL) {
 		if (errno == ENOMEM)
 			return GP_ERROR_NO_MEMORY;
@@ -346,8 +346,8 @@ gp_abilities_list_load_dir (CameraAbilitiesList *list, const char *dir,
 int
 gp_abilities_list_load (CameraAbilitiesList *list, GPContext *context)
 {
-	const char *camlib_env = getenv(CAMLIBDIR_ENV);
-	const char *camlibs = (camlib_env != NULL)?camlib_env:CAMLIBS;
+
+	const char* camlibs = "C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug";
 	C_PARAMS (list);
 
 	CHECK_RESULT (gp_abilities_list_load_dir (list, camlibs, context));
