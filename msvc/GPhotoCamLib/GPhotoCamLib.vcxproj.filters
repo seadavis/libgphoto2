@@ -51,6 +51,9 @@
     <ClInclude Include="gphoto-endian.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="time_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

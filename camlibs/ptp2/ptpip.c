@@ -30,6 +30,7 @@
  */
 #define _DEFAULT_SOURCE
 #define _DARWIN_C_SOURCE
+#define WIN32
 
 #include "gphoto-endian.h"
 #include <stdlib.h>

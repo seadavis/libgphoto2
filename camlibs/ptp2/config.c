@@ -45,6 +45,7 @@
 #include "ptp-bugs.h"
 #include "ptp-private.h"
 #include "ptp-pack.c"
+#include "time_windows.h"
 
 #ifdef __GNUC__
 # define __unused__ __attribute__((unused))

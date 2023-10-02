@@ -121,6 +121,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,6 +156,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="gphoto-endian.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="time_windows.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\camlibs\ptp2\chdk.c" />
