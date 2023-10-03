@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "..\Tests\Tests.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPhotoUSB", "..\GPhotoUSB\GPhotoUSB.vcxproj", "{1B9AB8E6-A01F-49C2-B2B1-97E3208A38F2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleLoadDll", "..\ConsoleLoadDll\ConsoleLoadDll.vcxproj", "{C79D0C6D-400D-48DD-8AB5-C310384AC08B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{1B9AB8E6-A01F-49C2-B2B1-97E3208A38F2}.Release|x64.Build.0 = Release|x64
 		{1B9AB8E6-A01F-49C2-B2B1-97E3208A38F2}.Release|x86.ActiveCfg = Release|Win32
 		{1B9AB8E6-A01F-49C2-B2B1-97E3208A38F2}.Release|x86.Build.0 = Release|Win32
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Debug|x64.ActiveCfg = Debug|x64
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Debug|x64.Build.0 = Debug|x64
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Debug|x86.ActiveCfg = Debug|Win32
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Debug|x86.Build.0 = Debug|Win32
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Release|x64.ActiveCfg = Release|x64
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Release|x64.Build.0 = Release|x64
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Release|x86.ActiveCfg = Release|Win32
+		{C79D0C6D-400D-48DD-8AB5-C310384AC08B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

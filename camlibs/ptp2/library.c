@@ -3030,6 +3030,7 @@ is_mtp_capable(Camera *camera) {
 }
 
 int
+__declspec(dllexport)
 camera_abilities (CameraAbilitiesList *list)
 {
 	unsigned int i;
@@ -3172,7 +3173,7 @@ camera_abilities (CameraAbilitiesList *list)
 }
 
 int
-camera_id (CameraText *id)
+__declspec(dllexport) camera_id (CameraText *id)
 {
 	strcpy (id->text, "PTP");
 
@@ -9691,6 +9692,7 @@ static CameraFilesystemFuncs fsfuncs = {
 };
 
 int
+__declspec(dllexport)
 camera_init (Camera *camera, GPContext *context)
 {
     	CameraAbilities a;

@@ -1,4 +1,9 @@
 ﻿  gphoto2-abilities-list.c
 C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(236,42): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
 C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-abilities-list.c(309,43): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+  gphoto2-camera.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-camera.c(791,4): warning C4013: 'lt_dlerror' undefined; assuming extern returning int
+  gphoto2-library.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2\gphoto2-library.c(85,1): warning C4029: declared formal parameter list different from definition
+  Generating Code...
   GPhoto.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhoto.lib

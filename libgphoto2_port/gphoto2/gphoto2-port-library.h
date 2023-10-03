@@ -95,9 +95,9 @@ typedef GPPortOperations *(* GPPortLibraryOperations) (void);
  * functions. Everything else in your io library should be declared static.
  */
 
-GPPortType gp_port_library_type       (void);
-int gp_port_library_list       (GPPortInfoList *list);
+GPPortType __declspec(dllexport) gp_port_library_type       (void);
+int __declspec(dllexport)  gp_port_library_list       (GPPortInfoList *list);
 
-GPPortOperations *gp_port_library_operations (void);
+GPPortOperations __declspec(dllexport) *gp_port_library_operations (void);
 
 #endif /* !defined(LIBGPHOTO2_GPHOTO2_PORT_LIBRARY_H) */

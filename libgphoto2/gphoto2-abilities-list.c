@@ -181,6 +181,7 @@ foreach_func (const char *filename, lt_ptr data)
 	CameraList *list = fd->list;
 
 	GP_LOG_D ("Found '%s'.", filename);
+
 	fd->result = gp_list_append (list, filename, NULL);
 
 	return ((fd->result == GP_OK)?0:1);
@@ -347,7 +348,7 @@ int
 gp_abilities_list_load (CameraAbilitiesList *list, GPContext *context)
 {
 
-	const char* camlibs = "C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug";
+	const char* camlibs = "C:\\Software Projects\\Copied Repos\\libgphoto2\\msvc\\GPhoto\\x64\\Debug";
 	C_PARAMS (list);
 
 	CHECK_RESULT (gp_abilities_list_load_dir (list, camlibs, context));

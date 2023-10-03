@@ -143,6 +143,7 @@ struct _GPPortPrivateLibrary {
 };
 
 GPPortType
+__declspec(dllexport)
 gp_port_library_type (void)
 {
 	return (GP_PORT_USB);
@@ -175,6 +176,7 @@ load_devicelist (GPPortPrivateLibrary *pl) {
 }
 
 int
+__declspec(dllexport)
 gp_port_library_list (GPPortInfoList *list)
 {
 	GPPortInfo	info;
@@ -369,7 +371,7 @@ static int gp_libusb1_queue_interrupt_urbs (GPPort *port);
 static int
 gp_libusb1_open (GPPort *port)
 {
-	int ret;
+	int ret =0;
 
 	GP_LOG_D ("()");
 	C_PARAMS (port);
@@ -386,7 +388,8 @@ gp_libusb1_open (GPPort *port)
 				   strerror(saved_errno));
 		return GP_ERROR_IO;
 	}
-	ret = libusb_kernel_driver_active (port->pl->dh, port->settings.usb.interface);
+
+	//ret = libusb_kernel_driver_active (port->pl->dh, port->settings.usb.interface);
 
 #if 0
 	if (strstr(name,"usbfs") || strstr(name,"storage")) {
@@ -1503,8 +1506,9 @@ gp_libusb1_find_device_by_class_lib(GPPort *port, int class, int subclass, int p
 	return GP_ERROR_IO_USB_FIND;
 }
 
-GPPortOperations *
-gp_port_library_operations (void)
+GPPortOperations
+__declspec(dllexport)
+*gp_port_library_operations (void)
 {
 	GPPortOperations *ops;
 
