@@ -1,0 +1,7 @@
+﻿  libusb1.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\libusb1\libusb1.c(168,18): warning C4244: '=': conversion from 'ssize_t' to 'int', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\libusb1\libusb1.c(199,13): warning C4244: '=': conversion from 'ssize_t' to 'int', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\libusb1\libusb1.c(1072,17): warning C4244: '=': conversion from 'ssize_t' to 'int', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\libusb1\libusb1.c(1154,17): warning C4244: '=': conversion from 'ssize_t' to 'int', possible loss of data
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\libusb1\libusb1.c(1444,17): warning C4244: '=': conversion from 'ssize_t' to 'int', possible loss of data
+  GPhotoUSB.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhotoUSB.lib

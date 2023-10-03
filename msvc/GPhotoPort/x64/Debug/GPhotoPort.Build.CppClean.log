@@ -1,6 +1,6 @@
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.pch
-c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\vc143.pdb
-c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\vc143.idb
+c:\software projects\copied repos\libgphoto2\msvc\gphoto\x64\debug\gphotoport.pdb
+c:\software projects\copied repos\libgphoto2\msvc\gphoto\x64\debug\gphotoport.idb
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\pch.obj
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphoto2-port.obj
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphoto2-port-version.obj
@@ -9,12 +9,10 @@ c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphoto2-p
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphoto2-port-log.obj
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphoto2-port-info-list.obj
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\dllmain.obj
-c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.ilk
-c:\software projects\copied repos\libgphoto2\msvc\gphoto\x64\debug\gphotoport.dll
-c:\software projects\copied repos\libgphoto2\msvc\gphoto\x64\debug\gphotoport.pdb
+c:\software projects\copied repos\libgphoto2\msvc\gphoto\x64\debug\gphotoport.lib
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\cl.command.1.tlog
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\cl.read.1.tlog
 c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\cl.write.1.tlog
-c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\link.command.1.tlog
-c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\link.read.1.tlog
-c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\link.write.1.tlog
+c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\lib-link.read.1.tlog
+c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\lib-link.write.1.tlog
+c:\software projects\copied repos\libgphoto2\msvc\gphotoport\x64\debug\gphotoport.tlog\lib.command.1.tlog

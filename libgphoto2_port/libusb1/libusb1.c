@@ -21,7 +21,6 @@
  * Boston, MA  02110-1301  USA
  */
 #define _DARWIN_C_SOURCE
-#include "config.h"
 #include <gphoto2/gphoto2-port-library.h>
 
 #include <stdlib.h>
@@ -661,7 +660,7 @@ _cb_irq(struct libusb_transfer *transfer)
 	}
 
 	if (transfer->actual_length) {
-		GP_LOG_DATA ((char*)transfer->buffer, transfer->actual_length, "interrupt");
+		//GP_LOG_DATA ((char*)transfer->buffer, transfer->actual_length, "interrupt");
 
 		irq_new->data_len = transfer->actual_length;
 		// Steal the transfer buffer and replace it with a new one for reusing the transfer

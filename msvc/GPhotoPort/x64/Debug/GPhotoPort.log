@@ -1,1 +1,6 @@
-﻿  GPhotoPort.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhotoPort.lib
+﻿  gphoto2-port-info-list.c
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\gphoto2\gphoto2-port-log.h(165,1): warning C4005: 'GP_DEBUG': macro redefinition
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\gphoto2\gphoto2-port-log.h(72,1): message : see previous definition of 'GP_DEBUG'
+  We need regex.h, but it has not been detected.
+C:\Software Projects\Copied Repos\libgphoto2\libgphoto2_port\libgphoto2_port\gphoto2-port-info-list.c(377,6): warning C4101: 'result': unreferenced local variable
+  GPhotoPort.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhotoPort.lib

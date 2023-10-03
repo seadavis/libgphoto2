@@ -1,7 +1,1 @@
-﻿GPhotoPort.lib(gphoto2-port.obj) : warning LNK4204: '' is missing debugging information for referencing module; linking object as if no debug info
-GPhotoPort.lib(gphoto2-port-log.obj) : warning LNK4204: '' is missing debugging information for referencing module; linking object as if no debug info
-GPhotoPort.lib(gphoto2-port-info-list.obj) : warning LNK4204: '' is missing debugging information for referencing module; linking object as if no debug info
-libtool.lib(ltdl.obj) : warning LNK4204: '' is missing debugging information for referencing module; linking object as if no debug info
-GPhotoPort.lib(gphoto2-port-portability.obj) : warning LNK4204: '' is missing debugging information for referencing module; linking object as if no debug info
-GPhotoPort.lib(gphoto2-port-result.obj) : warning LNK4204: '' is missing debugging information for referencing module; linking object as if no debug info
-  GPhotoCamLib.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhotoCamLib.dll
+﻿  GPhotoCamLib.vcxproj -> C:\Software Projects\Copied Repos\libgphoto2\msvc\GPhoto\x64\Debug\GPhotoCamLib.dll
